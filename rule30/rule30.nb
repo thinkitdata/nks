@@ -1,0 +1,12 @@
+This code uses the CellularAutomaton function in the Wolfram Language to generate a 1-dimensional array of 0s and 1s that represents 
+the evolution of the Rule 30 cellular automaton. The initial state of the automaton is a single 1 surrounded by 0s.
+
+The resulting array is then plotted using the ArrayPlot function, which displays the array as a grid of black and white squares. 
+The PixelConstrained option sets the size of each square, while the Mesh option adds grid lines to make it easier to see the individual cells of the automaton.
+
+This code will generate a plot that shows the evolution of the Rule 30 automaton over 50 steps, according to the rule that governs 
+the transition from one row to the next. The resulting plot should resemble the familiar triangle pattern that is characteristic of Rule 30.
+
+rule30 = CellularAutomaton[30, {{1}, 0}, 50];
+
+ArrayPlot[rule30, PixelConstrained -> 4, Mesh -> True]
